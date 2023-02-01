@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSS Pledge</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aadccaf56e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img src="data:image/png;base64,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" 
+    width="30" class="img1">
+    <p class="p1"><B>EMAIL US</B><br>info@example.com</p>
+
+    <!--top bar-->
+    <div class="a11">
+       <p class="p2"><b><i class="fa-solid fa-cake-candles"></i> CAKEZONE</b></p>
+    </div>
+    <!--top bar-->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhzXCxszrgwrtJbcx_dFYu_IZ-OifVSb-oW7VyFoCeJB18PBUWNx5B1exeILQz6PoBxu0&usqp=CAU"
+     width="40" class="img2">
+     <p class="p3"><b>CALL US</b><br>+012 345 6789</p>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid" id="co">
+          <a class="navbar-brand " href="#"></a>
+          <p class="hidden"><b><i class="fa-solid fa-cake-candles"></i> CAKEZONE</b></p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="icon">
+            <span class="navbar-toggler-icon " ></span>
+          </button>
+          <div class="collapse navbar-collapse bg-dark" id="navbarSupportedContent" class="id">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ul">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="a1">HOME</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="a4">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" id="a2">MENU&PRICING</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" id="a3">MASTER CHEFS</a>
+              </li>
+              
+                
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" id="a5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown" >
+                  <li><a class="dropdown-item" href="#">About FOSS United</a></li>
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">Forum</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="a4">CONTACT US</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+      
+
+      
+      <!---background image-->
+    
+      <img src="1\hhh.jpg" width="1270" height="500" class="img3">
+      <p class="p5"><B>Super Crispy</p>
+      <p class="p6">CAKEZONE</p>
+      <p class="p7  ">THE BEST CAKE IN LONDON </b></p><BR>
+
+        <div class="a111">
+          <p class="p21"> <b>Readmore</b></p>
+       </div>
+
+      <!--background image -->
+
+      <img src="data:image/png;base64,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" width="50"
+       class="img5"> <P class="pp"><b>Play Video</b></P>
+
+       <!--start-->
+       
+       <div class="c1">
+        <p class="c2"><center><b class="c2">about us</b></center></p>
+        <B><p class="c3">WELCOME TO CAKEZONE</p></B><br>
+        
+        
+       </div>
+
+       <img src="1\about.jpg" width="300" height="410"
+        class="img6">
+
+        <p class="c4"><b>Tempor erat clitr rebum clita. Diam dolor diam ipsum erat lorem <br>
+        sed stet labore lorem sit clita duo.</b></p>
+
+        <p class="c5">Tempor erat elitr at rebum at artical .Diamo docor at temper sit. Clita<br>
+        erat ipsum at lorem at sit,sed stet no. lobrem sat .Sancutus clita duo justo et <br>
+      tempor eirmod magna dolore erat amet magna. </p>
+
+      <!---favicon-->
+      <div class="a211">
+        <p class="p221">
+           <i class="fa-solid fa-heart-pulse fa-2x"></i>  
+     </div>
+     <!--fontawesome-->
+     <div class="b211">
+      <p class="b221">
+        <i class="fa-solid fa-award fa-2x"></i> 
+   </div>
+
+
+   <p class="d1"><b>100% HEALTHY</b></p>
+   <P class="d2">Labore justo vero ipsum sit clita erat <br>lorem magna clita nonumy dolr<br>
+  magna dolor vero.</P>
+
+  <!--about-->
+  <p class="d3"><b>AWARD WINNING</b></p>
+   <P class="d4">Labore justo vero ipsum sit clita erat <br>lorem magna clita nonumy dolr<br>
+  magna dolor vero.</P>
+
+  <div class="e1">
+    <img src="1\bg.jpg" width="1280" height="180" class="img8">
+  </div>
+
+  <!--about-->
+  <div class="c211">
+    <p class="c221">
+      <i class="fa-solid fa-mug-hot fa-1x"></i> 
+ </div>
+
+ <div class="d211">
+  <p class="d221">
+    <i class="fa-solid fa-star fa-1x"></i>
+</div>
+
+
+<div class="e211">
+  <p class="e221">
+    <i class="fa-solid fa-users-line"></i> 
+</div>
+
+
+<div class="f211">
+  <p class="f221">
+    <i class="fa-solid fa-check fa-1x"></i>
+</div>
+
+<!--style-->
+<p class="f1">
+  <b>OUR EXPERIENCE</b>
+</p>
+<P class="f2">
+  12345
+</P>
+
+
+
+
+<!--style-->
+<p class="f3">
+  <b>CAKE SPECIALIST</b>
+</p>
+<P class="f4">
+  12345
+</P>
+<!--style-->
+
+<p class="f5">
+  <b>COMPLETE PROJECT</b>
+</p>
+<P class="f6">
+  12345
+</P>
+
+<!--style-->
+
+<p class="f7">
+  <b>HAPPY CLIENTS</b>
+</p>
+<P class="f8">
+  12345
+</P>
+
+
+<!--style-->
+
+<p class="g1">
+<b>menu & pricing</b>
+</p>  
+<B><p class="c13">EXPLORE OUR CAKES</p></B>
+<!--style-->
+
+<div class="g4">
+  <p class="g5"><C class="g11">BIRTHDAY</C>   
+    <C class="g12">WEDDING</C> <C class="g13">CUSTOM</C></p>
+</div>
+<!---style-->
+
+<div class="co">
+  <div class="row">
+    <div class="col-md-4" id="co1"><img src="1\cake-1.jpg"
+       width="100" height="100" class="img10"> <P class="v1"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+      diam stets sit justo.</P></div>
+    
+  </div>
+
+
+  <div class="co2">
+    <div class="row">
+      <div class="col-md-4" id="co4"><img src="1\cake-1.jpg"
+         width="100" height="100" class="img11"> <P class="v2"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+        diam stets sit justo.</P></div>
+      
+    </div>
+  
+
+    <div class="co3">
+      <div class="row">
+        <div class="col-md-4" id="co5"><img src="1\cake-1.jpg"
+           width="100" height="100" class="img12"> <P class="v3"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+          diam stets sit justo.</P></div>
+        
+      </div>
+
+      <!---menu-->
+  
+      <div class="co4">
+        <div class="row">
+          <div class="col-md-4" id="co6"><img src="1\cake-1.jpg"
+             width="100" height="100" class="img13"> <P class="v4"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+            diam stets sit justo.</P></div>
+          
+        </div>
+
+
+        <div class="co5">
+          <div class="row">
+            <div class="col-md-4" id="co7"><img src="1\cake-1.jpg"
+               width="100" height="100" class="img15"> <P class="v5"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+              diam stets sit justo.</P></div>
+            
+          </div>
+
+          
+        <div class="co6">
+          <div class="row">
+            <div class="col-md-4" id="co8"><img src="1\cake-1.jpg"
+               width="100" height="100" class="img16"> <P class="v6"><b>BIRTHDAY CAKE</b> <br>Lpsum ipsum clita erat amet dolor sit justo sea eirmod<br>
+              diam stets sit justo.</P></div>
+            
+          </div>
+
+          <!--menu  -->
+
+          <p class="u1"> <b>$99.00</b></p>
+
+          <p class="u2"> <b>$99.00</b></p>
+
+          <p class="u3"> <b>$99.00</b></p>
+
+          <p class="u4"> <b>$99.00</b></p>
+
+          <p class="u5"> <b>$99.00</b></p>
+
+          <p class="u6"> <b>$99.00</b></p>
+</div>
+
+          <!--menu-->
+          <br>
+
+<div class="x">
+  <img src="1\se.jpg" width="1270" height="360" class="img20">
+ 
+  <div class="v111">
+    <p class="v21"> <b><br>BIRTHDAY CAKE</b></p>
+    <P class="x2"> Lpsum ipsum clita erat amet dolor sit <br>
+    justo sea eirmod diam stets sit justo amet tempor amet kasd lorem dolor ipsum.<br>
+  <P CLASS="x3">READ MORE <i class="fa-solid fa-arrow-right"></i></P></P>
+ </div>
+
+
+ <div class="v211">
+  <p class="v22"> <b><br>BIRTHDAY CAKE</b></p>
+  <P class="x4"> Lpsum ipsum clita erat amet dolor sit <br>
+  justo sea eirmod diam stets sit justo amet tempor amet kasd lorem dolor ipsum.<br>
+<P CLASS="x5">READ MORE <i class="fa-solid fa-arrow-right"></i></P></P>
+</div>
+</div>
+
+<div class="v311">
+  <p class="v23"> <b><br>BIRTHDAY CAKE</b></p>
+  <P class="x6"> Lpsum ipsum clita erat amet dolor sit <br>
+  justo sea eirmod diam stets sit justo amet tempor amet kasd lorem dolor ipsum.<br>
+<P CLASS="x7">READ MORE <i class="fa-solid fa-arrow-right"></i></P></P>
+</div>
+
+
+</div>
+<p class="x10"><b>30% DISCOUNT FOR THIS SUMMER</b></p>
+
+<div class="x111">
+  <p class="x21"> <b>ORDER NOW</b></p>
+  
+</div>
+
+<!--members-->
+
+<p class="x31">
+  <b>Team Members</b>
+  </p>  
+  <B><p class="x32">OUR MASTER CHEFS</p></B>
+  <!--members-->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column12 {
+      float: right;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row12::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+    
+    
+    
+    
+    <div class="row12">
+      <div class="column12">
+        <img src="1\team-1.jpg" alt="Snow" width="300" height="400" class="ii">
+      </div>
+      <div class="column12">
+        <img src="1\team-2.jpg" alt="Forest" width="300" height="400" class="ii1">
+      </div>
+      <div class="column12">
+        <img src="1\team-3.jpg" alt="Mountains" width="300" height="400" class="ii2">
+      </div>
+    </div>
+    
+    <!--members-->
+    <div class="z111">
+      <p class="z21"> <b class="bbc">FULL NAME</b><BR>Designation</p>
+      
+    </div>
+
+    <div class="z211">
+      <p class="z22"> <b class="bbc">FULL NAME</b><BR>Designation</p>
+      
+    </div>
+
+    <div class="z311">
+      <p class="z23"> <b class="bbc">FULL NAME</b><BR>Designation</p>
+      
+    </div>
+
+    <!--members-->
+
+    <div class="j1">
+      <img src="1\cr.jpg" width="1275" height="350" class="img21">
+
+    </div>
+
+    <p class="x35">
+      <b>Special Kombo Pack</b>
+      </p>  
+      <B><p class="x36">SUPER CRISPY CAKES</p></B>
+      <P class="x37">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quis mollitia <br>adipisci incidunt necessitatibus voluptatum ducimus
+         ad cupiditate provident impedit exercitationem<br> dignissimos molestias, non, unde sint id 
+         reprehenderit eius, ipsa repudiandae.<br> Pariatur qui fugiat quas maiores, reprehenderit non totam autem?</P>
+
+
+      <!--shope-->
+  <div class="m111">
+  <p class="m21"> <b>SHOPE NOW</b></p>
+<br>
+  <p class="m">Read More</p>
+  
+</div>
+
+<!--testimonial-->
+<p class="n1">
+      <b>Testimonial</b>
+      </p>  
+      <B><p class="n2">OUR CLIENTS SAY!!!</p></B>
+
+      <!--testimonial-->
+
+      <div class="n311">
+        <p class="n23"> <img src="1\testimonial-3.jpg" width="60" height="80px" class="img25">
+          <b class="cbc">CLIENT NAME</b><h class="xz">Profession</h><br><p class="br">
+        Dolor et eos labore, stets justo sed est sed.Diam sed sed dolor stet smet eirmod eos
+      labore diam.</p>  
+      </div> 
+
+
+      <div class="j311">
+        <p class="j23"> <img src="1\testimonial-4.jpg" width="60" height="80px" class="img26">
+          <b class="jbc">CLIENT NAME</b><h class="jz">Profession</h><br><p class="jr">
+        Dolor et eos labore, stets justo sed est sed.Diam sed sed dolor stet smet eirmod eos
+      labore diam.</p>  
+      </div> 
+
+      <div class="u311">
+        <p class="u23"> <img src="1\testimonial-2.jpg" width="60" height="80px" class="img27">
+          <b class="ubc">CLIENT NAME</b><h class="uz">Profession</h><br><p class="ur">
+        Dolor et eos labore, stets justo sed est sed.Diam sed sed dolor stet smet eirmod eos
+      labore diam.</p>  
+      </div> 
+
+
+      <div class="gr"><p class="o"></p>
+        <p class="o1"></p>
+        <p class="o2"></p>
+        <p class="o3"></p></div>
+        </div>
+        </div>
+      
+
+        <!--footer-->
+
+        <div class="e11">
+          <img src="1\bg.jpg" width="1280" height="340" class="img81">
+
+
+          <div class="d311">
+            <i class="fa-solid fa-cake-candles fa-2x" id="i"></i>
+            <p class="d23">  <b><br>CAKEZONE</b></p>
+            <P class="d6"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore repellendus tempore accusamus delectus voluptas officiis quibusdam, unde corrupti, quasi distinctio accusantium modi et voluptatum doloribus non inventore. Nobis eius rem nisi quos!<br>
+          
+          </div>
+
+          <div class="s1">
+            <p class="s2">GET IN TOUCH</p>
+            <p class="s3"><i class="fa-solid fa-location-dot" id="i12"></i> 123 steet,New York,USA</p>
+
+          </div>
+
+          <div class="s1">
+            <p class="s2">GET IN TOUCH</p>
+            <p class="s3"><i class="fa-solid fa-location-dot" id="i12"></i> 123 steet,New York,USA</p>
+            <p class="s4"><i class="fa-solid fa-envelope" id="i12"></i> info@example.com</p>
+            <p class="s5"><i class="fa-solid fa-phone" id="i12"></i> +012 345 67890</p>
+          </div>
+
+
+          <div class="t211">
+            <p class="t221">
+              <i class="fa-brands fa-twitter fa-1x"></i> 
+         </div>
+
+
+         <div class="t311">
+          <p class="t321">
+            <i class="fa-brands fa-facebook"></i>
+       </div>
+
+       <div class="t411">
+        <p class="t421">
+          <i class="fa-brands fa-linkedin"></i>
+     </div>
+
+
+
+     <div class="s1">
+      <p class="s21">QUICK LINKS</p>
+      <p class="s31"><i class="fa-solid fa-arrow-right"  id="i12"></i> Home</p>
+      <p class="s41"><i class="fa-solid fa-arrow-right"  id="i12"></i> About us</p>
+      <p class="s51"><i class="fa-solid fa-arrow-right"  id="i12"></i> Our Services</p>
+      <p class="s61"><i class="fa-solid fa-arrow-right"  id="i12"></i> Meet the Team</p>
+      <p class="s71"><i class="fa-solid fa-arrow-right"  id="i12"></i> Latest Blog</p>
+      <p class="s81"><i class="fa-solid fa-arrow-right"  id="i12"></i> Contact us</p>
+    </div>
+
+    <!--footer-->
+
+    <div class="s1">
+      
+      
+      <p class="sv">NEWSLETTER</p>
+      <p class="sv3">Amet justo diam dolor rebum<br> lorem sit stet sea justo kasd.</p>
+      
+      <input type="text" placeholder="Your Email" class="input">
+      <button id="bb">Sign Up</button>
+    </div>
+<div class="q">
+    <div class="q1"><h class="ww">@Your site Name</h>. All Rights Reserved. Designed by<h class="ww"> HTML Codex.</h>
+</div>
+    
+<!--Go to top-->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+</body>
+</html>
